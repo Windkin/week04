@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../components/layout';
 import { getColor } from '../lib/data';
 
+
 export async function getStaticProps() {
   const allData = getColor();
   return {
@@ -11,11 +12,12 @@ export async function getStaticProps() {
     }
   }
 }
+
 export default function Home({ allData }) {
   return (
-      <Layout home>
+    <Layout home>
         <h1>List of Names</h1>
-        <div className="list-group">
+          <div className="list-group">
           {allData.map(({ id, color }) => (
             <Link key={id} href={`/${id}`}>
               <a className="list-group-item list-group-item-action">{color}</a>

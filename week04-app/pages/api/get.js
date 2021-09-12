@@ -9,7 +9,7 @@ const dataDir = path.join( process.cwd(), "data" );
 // console.log(dataDir);
 
 export default function handler(req, res) {
-  const filepath = path.join( dataDir, "persons.json, color.json" );
+  const filepath = path.join( dataDir, "persons.json" );
 
   const jsondata = fs.readFileSync( filepath, "utf8" );
 
