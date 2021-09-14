@@ -72,7 +72,7 @@ export async function getData(idRequested) {
 ////////////////////////////////
 
 // function returns names and ids for all json objects in array, sorted by name property
-export function getColor() {
+export function getFood() {
   // get filepath to json file
   const filePath = path.join(dataDir, 'person.json');
   // load json file contents
@@ -85,7 +85,8 @@ export function getColor() {
   return jsonObj.map(item => {
     return {
       id: item.id.toString(),
-      color: item.color
+      food: item.food,
+      img: item.img
     }
   });
 }

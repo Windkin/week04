@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/layout';
-import { getColor } from '../lib/data';
+import { getFood } from '../lib/data';
 
 
 export async function getStaticProps() {
-  const allData = getColor();
+  const allData = getFood();
   return {
     props: {
       allData
@@ -16,14 +16,21 @@ export async function getStaticProps() {
 export default function Home({ allData }) {
   return (
     <Layout home>
-        <h1>List of Names</h1>
-          <div className="list-group">
-          {allData.map(({ id, color }) => (
-            <Link key={id} href={`/${id}`}>
-              <a className="list-group-item list-group-item-action">{color}</a>
-            </Link>
-          ))}
+      <h2 class="text-center">Menu Items</h2>
+        <div className="container text-center">
+          <div class="row">
+            {allData.map(({ id, food, img }) => (
+              <div class="col-4 mt-20">
+                <Link key={id} href={`/${id}`}>
+                  <a>
+                    <img src={img}/><br/>
+                      {food}
+                  </a>
+                </Link>
+              </div>
+            ))}
         </div>
-      </Layout>
+      </div>
+    </Layout>
   );
 }

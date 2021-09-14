@@ -1,14 +1,32 @@
 [
   { 
-    "color": "https://www.encodedna.com/images/theme/jQuery.png",
+    "food": "Bagel",
+    "img": "https://i.postimg.cc/Z5Lm2gCK/20210110-182742.jpg",
     "id": 1
   },
   { 
-    "color": "white",
+    "food": "Kala Pao",
+    "img": "https://i.postimg.cc/9fcS9QXc/20210301-183032.jpg",
     "id": 2
   },
   { 
-    "color": "blue",
+    "food": "British Breakfast",
+    "img": "https://i.postimg.cc/V5yZkYHQ/20210703-110106.jpg",
     "id": 3
+  },
+  { 
+    "food": "Chicken Enchiladas",
+    "img": "https://i.postimg.cc/wjzHWHxG/20210814-213336.jpg",
+    "id": 4
+  },
+  { 
+    "food": "Tater Tot Pizza",
+    "img": "https://i.postimg.cc/FzknvfpV/20210910-205327.jpg",
+    "id": 5
+  },
+  { 
+    "food": "Chocolate Croissant",
+    "img": "https://i.postimg.cc/fW5bSVwR/IMG-20201015-200147-153.jpg",
+    "id": 6
   }
 ]
