@@ -22,28 +22,6 @@ export function getAllIds() {
   });
 }
 
-// function returns names and ids for all json objects in array, sorted by name property
-/*export function getSortedList() {
-  // get filepath to json file
-  const filePath = path.join(dataDir, 'persons.json');
-  // load json file contents
-  const jsonString = fs.readFileSync(filePath, 'utf8');
-  // convert string from file into json array object
-  const jsonObj = JSON.parse(jsonString);
-  // sort json array by name property
-  jsonObj.sort(function (a, b) {
-      return a.name.localeCompare(b.name);
-  });
-
-  // use map() on array to extract just id + name properties into new array of obj values
-  return jsonObj.map(item => {
-    return {
-      id: item.id.toString(),
-      name: item.name
-    }
-  });
-}*/
-
 export async function getData(idRequested) {
   // get filepath to json file
   const filePath = path.join(dataDir, 'persons.json');
@@ -68,8 +46,6 @@ export async function getData(idRequested) {
   // return object value found
   return objReturned;
 }
-
-////////////////////////////////
 
 // function returns names and ids for all json objects in array, sorted by name property
 export function getFood() {

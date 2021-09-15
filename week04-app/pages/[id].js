@@ -20,7 +20,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Entry({ itemData }) {
+/*export default function Entry({ itemData }) {
   return (
     <Layout>
       <article className="card col-6">
@@ -31,6 +31,21 @@ export default function Entry({ itemData }) {
           <a href={'mailto:' + itemData.email} className="card-link">{itemData.email}</a>
         </div>
       </article>
+    </Layout>
+  );
+}*/
+
+export default function Entry({ itemData }){
+  return (
+    <Layout>
+      <div className="container">
+        <h3 className="text-center">{itemData.name}</h3>
+          <div className="row">
+            <img className="col-sm" src={itemData.img}/>
+            <div className="col">{itemData.description}</div>
+          </div>
+        <p>Made {itemData.date}</p>
+      </div>
     </Layout>
   );
 }

@@ -8,8 +8,12 @@ export default function Layout( { children, home } ) {
         <title>Week 4 Next JS App W. Richman</title>
       </Head>
       <header>
-        <nav>
-          <h1 class="text-center">Menu Of Random Things I Have Made</h1>
+        <nav class="text-center">
+          <h1>Menu Of Random Things I Have Made</h1>
+          {!home && (
+          <h2>Enjoy</h2>
+          )
+          }
         </nav>
       </header>
       <main>{children}</main>
@@ -19,6 +23,9 @@ export default function Layout( { children, home } ) {
           </Link>
         )
       }
+      <footer className="text-center">
+        <h6>Week 4 cs55.13 W. Richman</h6>
+      </footer>
     </div>
   );
 }
