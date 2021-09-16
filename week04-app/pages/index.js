@@ -16,12 +16,12 @@ export async function getStaticProps() {
 export default function Home({ allData }) {
   return (
     <Layout home>
-      <h2 class="text-center">Menu Items</h2>
+      <h2 className="text-center">Menu Items</h2>
         <div className="container text-center">
-          <div class="row">
+          <div className="row">
             {allData.map(({ id, food, img }) => (
-              <div class="col-4 mt-20">
-                <Link key={id} href={`/${id}`}>
+              <div key={id} className="col-4 mt-20">
+                <Link href={`/${id}`}>
                   <a>
                     <img src={img}/><br/>
                       {food}

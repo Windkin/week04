@@ -8,7 +8,7 @@ export default function Layout( { children, home } ) {
         <title>Week 4 Next JS App W. Richman</title>
       </Head>
       <header>
-        <nav class="text-center">
+        <nav className="text-center">
           <h1>Menu Of Random Things I Have Made</h1>
           {!home && (
           <h2>Enjoy</h2>
@@ -19,7 +19,7 @@ export default function Layout( { children, home } ) {
       <main>{children}</main>
       {!home && (
           <Link href="/">
-            <a class="btn btn-primary mt-3">← Back to home</a>
+            <a className="btn btn-primary mt-3">← Back to home</a>
           </Link>
         )
       }
